@@ -1,6 +1,6 @@
-# Claude Code Bubblewrap Launcher
+# AI Agent Bubblewrap Launcher
 
-A lightweight bash script that runs Claude Code in a fully sandboxed environment using [bubblewrap](https://github.com/containers/bubblewrap). The Claude binary never executes outside the sandbox - updates and version checks happen inside.
+A lightweight bash script that runs Claude Code in a fully sandboxed environment using [bubblewrap](https://github.com/containers/bubblewrap). The agent binary never executes outside the sandbox - updates and version checks happen inside.
 
 ## Features
 
@@ -38,7 +38,7 @@ claude mcp list   # List installed MCP servers
 
 ## Comparison
 
-| | **claude-launcher.sh** | **Built-in Sandbox** | **Dev Container + [Claude Feature](https://github.com/devcontainers/features)** | **[claudebox](https://github.com/RchGrav/claudebox)** | **[ClaudeCage](https://github.com/PACHAKUTlQ/ClaudeCage)** | **[cco](https://github.com/nikvdp/cco)** |
+| | **AI Agent Launcher** | **Built-in Sandbox** | **Dev Container + [Claude Feature](https://github.com/devcontainers/features)** | **[claudebox](https://github.com/RchGrav/claudebox)** | **[ClaudeCage](https://github.com/PACHAKUTlQ/ClaudeCage)** | **[cco](https://github.com/nikvdp/cco)** |
 |---|---|---|---|---|---|---|
 | **Technology** | Bubblewrap | Bubblewrap + socat | Dev Container + Docker/Podman | Docker | RunImage + Bubblewrap | Multiple |
 | **Easy to review** | Yes (~100 lines) | ❌ No (closed source) | Yes (config files) | ❌ No (thousands of lines) | Moderate (build script) | ❌ No (thousands of lines) |
