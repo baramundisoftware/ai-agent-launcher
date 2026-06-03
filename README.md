@@ -61,6 +61,22 @@ copilot-sandboxed              # Launch in current directory
 copilot-sandboxed explain      # Explain a command
 ```
 
+## Adding extra tools
+
+The sandbox only exposes the host's system tools (read-only), so package managers
+like [`uv`](https://docs.astral.sh/uv/)/`uvx` are not present by default. Because the
+sandbox home (`~/.claude-sandbox/home`) is persistent and `~/.local/bin` is already on
+`PATH`, you can install such tools **once** from inside a running agent and they remain
+available on every future launch — no need to reinstall each session.
+
+For example, have the agent run a shell command (in Claude Code, prefix it with `!`):
+
+```bash
+! curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+`uv` and `uvx` install into `~/.local/bin` and are immediately callable.
+
 ## Comparison
 
 |                             | **AI Agent Launcher**  | **Built-in Sandbox**                                                                                                                                                       | **Dev Container + [Claude Feature](https://github.com/devcontainers/features)** | **[claudebox](https://github.com/RchGrav/claudebox)**                                                         | **[ClaudeCage](https://github.com/PACHAKUTlQ/ClaudeCage)**                                                                                  | **[cco](https://github.com/nikvdp/cco)**                                                                            |
